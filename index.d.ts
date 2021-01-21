@@ -1,6 +1,6 @@
 declare module 'react-native-usb-mouse-android';
 
-export type GenericMotionEvent = { action: number; keyCode: number; pressedKey: string; characters: string };
+export type GenericMotionEvent = { action: number; x: number; y: number; scrollX: number, scrollY: number };
 
 export type MouseScrollListener = (event: GenericMotionEvent) => void;
 export type MouseHoverListener = (event: GenericMotionEvent) => void;

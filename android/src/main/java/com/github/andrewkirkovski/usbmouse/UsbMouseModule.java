@@ -8,6 +8,11 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.bridge.WritableMap;
 
+import android.view.MotionEvent;
+
+import static android.view.MotionEvent.AXIS_HSCROLL;
+import static android.view.MotionEvent.AXIS_VSCROLL;
+
 /**
  * Created by Andrew Kirkovski 21 Jan 2021.
  */
@@ -35,7 +40,7 @@ public class UsbMouseModule extends ReactContextBaseJavaModule {
             mJSModule = mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class);
         }
         mJSModule.emit("onMouseScroll", getJsEventParams(event));
-    };
+    }
 
     public void onMouseHover(MotionEvent event) {
         if (!mReactContext.hasActiveCatalystInstance()) {
@@ -46,7 +51,7 @@ public class UsbMouseModule extends ReactContextBaseJavaModule {
             mJSModule = mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class);
         }
         mJSModule.emit("onMouseHover", getJsEventParams(event));
-    };
+    }
 
     public void onGenericMotionEvent(MotionEvent event) {
         if (!mReactContext.hasActiveCatalystInstance()) {
@@ -66,23 +71,17 @@ public class UsbMouseModule extends ReactContextBaseJavaModule {
 
     private WritableMap getJsEventParams(MotionEvent event) {
         WritableMap params = new WritableNativeMap();
-        int action = UsbMouse.getAction();
-        char pressedKey = (char) UsbMouse.getUnicodeChar();
+        int action = event.getAction();
+        float scrollY = event.getAxisValue(AXIS_VSCROLL);
+        float scrollX = event.getAxisValue(AXIS_HSCROLL);
+        float x = event.getX();
+        float y = event.getY();
 
-        if (UsbMouse.getAction() == UsbMouse.ACTION_MULTIPLE && keyCode == UsbMouse.KEYCODE_UNKNOWN) {
-            String chars = UsbMouse.getCharacters();
-            if (chars != null) {
-                params.putString("characters", chars);
-            }
-        }
-
-        if (repeatCount != null) {
-            params.putInt("repeatcount", repeatCount);
-        }
-
-        params.putInt("keyCode", keyCode);
+        params.putDouble("x", x);
+        params.putDouble("y", y);
+        params.putDouble("scrollY", scrollY);
+        params.putDouble("scrollX", scrollX);
         params.putInt("action", action);
-        params.putString("pressedKey", String.valueOf(pressedKey));
 
         return params;
     }
