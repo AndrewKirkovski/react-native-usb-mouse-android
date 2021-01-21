@@ -2,9 +2,9 @@
 
 [![npm version](https://badge.fury.io/js/react-native-keyevent.svg)](http://badge.fury.io/js/react-native-keyevent)
 
-Capture external keyboard keys or remote control button events
+Capture external usb or bluetooth hardware mouse events like scroll and hover. Useful for RN applications that run on Chromebooks.
 
-**Supports Android only**
+**Supports Android / Chromebooks only**
 
 [Learn about Android MotionEvent here](https://developer.android.com/reference/android/view/MotionEvent).
 

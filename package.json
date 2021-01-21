@@ -1,11 +1,13 @@
 {
   "name": "react-native-usb-mouse-android",
-  "version": "0.1.0",
-  "description": "Capture external keyboard keys or remote control button events",
+  "version": "0.1.1",
+  "description": "Capture external usb or bluetooth hardware mouse events like scroll and hover.",
   "types": "index.d.ts",
   "keywords": [
     "react-native",
     "motionevent",
+    "bluetooth",
+    "chromebook",
     "genericmotionevent",
     "usbmouse",
     "mouse",
