@@ -1,0 +1,32 @@
+{
+  "name": "react-native-usb-mouse-android",
+  "version": "0.1.0",
+  "description": "Capture external keyboard keys or remote control button events",
+  "types": "index.d.ts",
+  "keywords": [
+    "react-native",
+    "motionevent",
+    "genericmotionevent",
+    "usbmouse",
+    "mouse",
+    "hardware",
+    "usb",
+    "joystick",
+    "external",
+    "android",
+    "module",
+    "remote"
+  ],
+  "author": "Andrew Kirkovski <ryotsuke@gmail.com> (github.com/AndrewKirkovski)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndrewKirkovski/react-native-usb-mouse-android.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AndrewKirkovski/react-native-usb-mouse-android/issues"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.60"
+  }
+}
