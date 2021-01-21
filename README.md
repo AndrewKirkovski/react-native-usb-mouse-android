@@ -65,7 +65,7 @@ Whenever you want to use it within React Native code now you can:
     const listener = UsbMouse.onMouseScroll((event: GenericMotionEvent)=>{
         console.log('Mouse Scroll', event);
     });
-    return listener.remove;
+    return ()=>listener.remove();
   }, []);
 ```
 
