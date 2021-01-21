@@ -1,6 +1,6 @@
 # React Native Usb Mouse Event
 
-[![npm version](https://badge.fury.io/js/react-native-keyevent.svg)](http://badge.fury.io/js/react-native-keyevent)
+[![npm version](https://badge.fury.io/js/react-native-usb-mouse-android.svg)](http://badge.fury.io/js/react-native-usb-mouse-android)
 
 Capture external usb or bluetooth hardware mouse events like scroll and hover. Useful for RN applications that run on Chromebooks.
 

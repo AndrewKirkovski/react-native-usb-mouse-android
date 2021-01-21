@@ -1,6 +1,6 @@
 {
   "name": "react-native-usb-mouse-android",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Capture external usb or bluetooth hardware mouse events like scroll and hover.",
   "types": "index.d.ts",
   "keywords": [
